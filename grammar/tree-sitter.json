@@ -1,0 +1,21 @@
+{
+  "grammars": [
+    {
+      "name": "modula2",
+      "camelcase": "Modula2",
+      "title": "ADW Modula-2",
+      "scope": "source.modula2",
+      "file-types": ["def", "mod", "DEF", "MOD"],
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^(modula-?2|m2)$"
+    }
+  ],
+  "metadata": {
+    "version": "1.1.0",
+    "license": "MIT",
+    "description": "ADW (Stony Brook) Modula-2 grammar for tree-sitter",
+    "authors": [{ "name": "Matsvei Radzevich" }],
+    "links": { "repository": "https://github.com/catink123/zed-adw-modula2" }
+  },
+  "bindings": { "c": false, "go": false, "node": false, "python": false, "rust": false, "swift": false }
+}

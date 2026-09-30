@@ -1,0 +1,3856 @@
+[
+  {
+    "type": "_statement",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "asm_statement",
+        "named": true
+      },
+      {
+        "type": "assignment",
+        "named": true
+      },
+      {
+        "type": "call_statement",
+        "named": true
+      },
+      {
+        "type": "case_statement",
+        "named": true
+      },
+      {
+        "type": "exit_statement",
+        "named": true
+      },
+      {
+        "type": "for_statement",
+        "named": true
+      },
+      {
+        "type": "guard_statement",
+        "named": true
+      },
+      {
+        "type": "if_statement",
+        "named": true
+      },
+      {
+        "type": "label",
+        "named": true
+      },
+      {
+        "type": "loop_statement",
+        "named": true
+      },
+      {
+        "type": "repeat_statement",
+        "named": true
+      },
+      {
+        "type": "retry_statement",
+        "named": true
+      },
+      {
+        "type": "return_statement",
+        "named": true
+      },
+      {
+        "type": "while_statement",
+        "named": true
+      },
+      {
+        "type": "with_statement",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "_type",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "array_type",
+        "named": true
+      },
+      {
+        "type": "enumeration_type",
+        "named": true
+      },
+      {
+        "type": "pointer_type",
+        "named": true
+      },
+      {
+        "type": "procedure_type",
+        "named": true
+      },
+      {
+        "type": "qualident",
+        "named": true
+      },
+      {
+        "type": "record_type",
+        "named": true
+      },
+      {
+        "type": "set_type",
+        "named": true
+      },
+      {
+        "type": "subrange_type",
+        "named": true
+      }
+    ]
+  },
+  {
+    "type": "abstract_procedure",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "result": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attribute_list",
+          "named": true
+        },
+        {
+          "type": "formal_parameters",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "actual_parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "arguments",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "array_type",
+    "named": true,
+    "fields": {
+      "element": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      },
+      "index": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "asm_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "asm_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assert_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "assignment",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "designator",
+            "named": true
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "attribute_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "binary_expression",
+    "named": true,
+    "fields": {
+      "left": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          },
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "*",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "/",
+            "named": false
+          },
+          {
+            "type": "<",
+            "named": false
+          },
+          {
+            "type": "<=",
+            "named": false
+          },
+          {
+            "type": "<>",
+            "named": false
+          },
+          {
+            "type": "=",
+            "named": false
+          },
+          {
+            "type": ">",
+            "named": false
+          },
+          {
+            "type": ">=",
+            "named": false
+          },
+          {
+            "type": "AND",
+            "named": false
+          },
+          {
+            "type": "BAND",
+            "named": false
+          },
+          {
+            "type": "BOR",
+            "named": false
+          },
+          {
+            "type": "BXOR",
+            "named": false
+          },
+          {
+            "type": "DIV",
+            "named": false
+          },
+          {
+            "type": "IN",
+            "named": false
+          },
+          {
+            "type": "MOD",
+            "named": false
+          },
+          {
+            "type": "OR",
+            "named": false
+          },
+          {
+            "type": "REM",
+            "named": false
+          },
+          {
+            "type": "ROL",
+            "named": false
+          },
+          {
+            "type": "ROR",
+            "named": false
+          },
+          {
+            "type": "SAR",
+            "named": false
+          },
+          {
+            "type": "SHL",
+            "named": false
+          },
+          {
+            "type": "SHR",
+            "named": false
+          }
+        ]
+      },
+      "right": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "bitfields",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "bitfields",
+          "named": true
+        },
+        {
+          "type": "field_declaration",
+          "named": true
+        },
+        {
+          "type": "variant_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "call_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "designator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "case_arm",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "case_labels",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "case_labels",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "case_statement",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "case_arm",
+          "named": true
+        },
+        {
+          "type": "else_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "class_declaration",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstract_procedure",
+          "named": true
+        },
+        {
+          "type": "asm_body",
+          "named": true
+        },
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "forward_procedure",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "inherit_clause",
+          "named": true
+        },
+        {
+          "type": "local_module",
+          "named": true
+        },
+        {
+          "type": "module_instance_declaration",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_declaration",
+          "named": true
+        },
+        {
+          "type": "reveal_list",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "class_definition",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "inherit_clause",
+          "named": true
+        },
+        {
+          "type": "macro_procedure",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_heading_declaration",
+          "named": true
+        },
+        {
+          "type": "reveal_list",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "const_declaration",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "const_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "const_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "definition_module",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_definition",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "generic_parameters",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "macro_procedure",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_heading_declaration",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "designator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "arguments",
+          "named": true
+        },
+        {
+          "type": "dereference",
+          "named": true
+        },
+        {
+          "type": "field_access",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "index",
+          "named": true
+        },
+        {
+          "type": "type_transfer",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "else_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "elsif_clause",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enumeration_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "enumerator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enumerator",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "export_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "field_access",
+    "named": true,
+    "fields": {
+      "field": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "field_declaration",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "for_statement",
+    "named": true,
+    "fields": {
+      "from": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      },
+      "step": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      },
+      "to": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      },
+      "variable": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formal_parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "parameter",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "formal_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_type",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "forward_class",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "forward_procedure",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "procedure_heading",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "from_import",
+    "named": true,
+    "fields": {
+      "module": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "wildcard",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "generic_parameter",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "generic_parameters",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "generic_parameter",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "guard_arm",
+    "named": true,
+    "fields": {
+      "class": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      },
+      "variable": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "guard_statement",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "else_clause",
+          "named": true
+        },
+        {
+          "type": "guard_arm",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "if_statement",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "else_clause",
+          "named": true
+        },
+        {
+          "type": "elsif_clause",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "implementation_module",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstract_procedure",
+          "named": true
+        },
+        {
+          "type": "asm_body",
+          "named": true
+        },
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "forward_procedure",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "generic_parameters",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "local_module",
+          "named": true
+        },
+        {
+          "type": "module_instance_declaration",
+          "named": true
+        },
+        {
+          "type": "priority",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_declaration",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "import_list",
+    "named": true,
+    "fields": {
+      "module": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "index",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inherit_clause",
+    "named": true,
+    "fields": {
+      "base": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "label",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "local_module",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstract_procedure",
+          "named": true
+        },
+        {
+          "type": "asm_body",
+          "named": true
+        },
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "forward_procedure",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "local_module",
+          "named": true
+        },
+        {
+          "type": "module_instance_declaration",
+          "named": true
+        },
+        {
+          "type": "priority",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_declaration",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "loop_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "macro_procedure",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "abstract_procedure",
+          "named": true
+        },
+        {
+          "type": "asm_body",
+          "named": true
+        },
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "forward_procedure",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "local_module",
+          "named": true
+        },
+        {
+          "type": "module_instance_declaration",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_declaration",
+          "named": true
+        },
+        {
+          "type": "procedure_heading",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_instance",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "generic": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "actual_parameters",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_instance_declaration",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "generic": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "actual_parameters",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "parameter",
+    "named": true,
+    "fields": {
+      "mode": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "CONST",
+            "named": false
+          },
+          {
+            "type": "VAR",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "parenthesized_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pointer_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "priority",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "procedure_alias",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "procedure_declaration",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "abstract_procedure",
+          "named": true
+        },
+        {
+          "type": "asm_body",
+          "named": true
+        },
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "forward_procedure",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "local_module",
+          "named": true
+        },
+        {
+          "type": "module_instance_declaration",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_declaration",
+          "named": true
+        },
+        {
+          "type": "procedure_heading",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "procedure_directive",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "procedure_heading",
+    "named": true,
+    "fields": {
+      "modifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "ABSTRACT",
+            "named": false
+          },
+          {
+            "type": "OVERRIDE",
+            "named": false
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "parameters": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "formal_parameters",
+            "named": true
+          }
+        ]
+      },
+      "result": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attribute_list",
+          "named": true
+        },
+        {
+          "type": "procedure_directive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "procedure_heading_declaration",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "procedure_heading",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "procedure_type",
+    "named": true,
+    "fields": {
+      "result": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attribute_list",
+          "named": true
+        },
+        {
+          "type": "formal_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "program_module",
+    "named": true,
+    "fields": {
+      "end_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "abstract_procedure",
+          "named": true
+        },
+        {
+          "type": "asm_body",
+          "named": true
+        },
+        {
+          "type": "assert_declaration",
+          "named": true
+        },
+        {
+          "type": "class_declaration",
+          "named": true
+        },
+        {
+          "type": "const_section",
+          "named": true
+        },
+        {
+          "type": "export_list",
+          "named": true
+        },
+        {
+          "type": "forward_class",
+          "named": true
+        },
+        {
+          "type": "forward_procedure",
+          "named": true
+        },
+        {
+          "type": "from_import",
+          "named": true
+        },
+        {
+          "type": "import_list",
+          "named": true
+        },
+        {
+          "type": "local_module",
+          "named": true
+        },
+        {
+          "type": "module_instance_declaration",
+          "named": true
+        },
+        {
+          "type": "priority",
+          "named": true
+        },
+        {
+          "type": "procedure_alias",
+          "named": true
+        },
+        {
+          "type": "procedure_declaration",
+          "named": true
+        },
+        {
+          "type": "statement_sequence",
+          "named": true
+        },
+        {
+          "type": "type_section",
+          "named": true
+        },
+        {
+          "type": "var_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "qualident",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "record_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "bitfields",
+          "named": true
+        },
+        {
+          "type": "field_declaration",
+          "named": true
+        },
+        {
+          "type": "variant_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "repeat_statement",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reveal_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_constructor",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "designator",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "set_type",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "_type",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "definition_module",
+          "named": true
+        },
+        {
+          "type": "implementation_module",
+          "named": true
+        },
+        {
+          "type": "module_instance",
+          "named": true
+        },
+        {
+          "type": "program_module",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "statement_sequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subrange_type",
+    "named": true,
+    "fields": {
+      "base": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "designator",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "parenthesized_expression",
+          "named": true
+        },
+        {
+          "type": "set_constructor",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_declaration",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "type_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "type_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_transfer",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "unary_expression",
+    "named": true,
+    "fields": {
+      "operand": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      },
+      "operator": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "BNOT",
+            "named": false
+          },
+          {
+            "type": "NOT",
+            "named": false
+          },
+          {
+            "type": "~",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "var_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "variable_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variable_declaration",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_type",
+            "named": true
+          }
+        ]
+      },
+      "value": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "attribute_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bitfields",
+          "named": true
+        },
+        {
+          "type": "case_labels",
+          "named": true
+        },
+        {
+          "type": "field_declaration",
+          "named": true
+        },
+        {
+          "type": "variant_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "variant_part",
+    "named": true,
+    "fields": {
+      "tag": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "tag_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "qualident",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "bitfields",
+          "named": true
+        },
+        {
+          "type": "field_declaration",
+          "named": true
+        },
+        {
+          "type": "variant",
+          "named": true
+        },
+        {
+          "type": "variant_part",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "while_statement",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "designator",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "parenthesized_expression",
+            "named": true
+          },
+          {
+            "type": "set_constructor",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_statement",
+    "named": true,
+    "fields": {
+      "record": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "designator",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "statement_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "..",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ":=",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<>",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "ABSTRACT",
+    "named": false
+  },
+  {
+    "type": "AND",
+    "named": false
+  },
+  {
+    "type": "ARRAY",
+    "named": false
+  },
+  {
+    "type": "AS",
+    "named": false
+  },
+  {
+    "type": "ASM",
+    "named": false
+  },
+  {
+    "type": "ASSEMBLER",
+    "named": false
+  },
+  {
+    "type": "ASSERT",
+    "named": false
+  },
+  {
+    "type": "BAND",
+    "named": false
+  },
+  {
+    "type": "BEGIN",
+    "named": false
+  },
+  {
+    "type": "BIG",
+    "named": false
+  },
+  {
+    "type": "BITFIELDS",
+    "named": false
+  },
+  {
+    "type": "BNOT",
+    "named": false
+  },
+  {
+    "type": "BOR",
+    "named": false
+  },
+  {
+    "type": "BXOR",
+    "named": false
+  },
+  {
+    "type": "BY",
+    "named": false
+  },
+  {
+    "type": "CASE",
+    "named": false
+  },
+  {
+    "type": "CLASS",
+    "named": false
+  },
+  {
+    "type": "CONST",
+    "named": false
+  },
+  {
+    "type": "DEFINITION",
+    "named": false
+  },
+  {
+    "type": "DIV",
+    "named": false
+  },
+  {
+    "type": "DO",
+    "named": false
+  },
+  {
+    "type": "ELSE",
+    "named": false
+  },
+  {
+    "type": "ELSIF",
+    "named": false
+  },
+  {
+    "type": "END",
+    "named": false
+  },
+  {
+    "type": "EXCEPT",
+    "named": false
+  },
+  {
+    "type": "EXPORT",
+    "named": false
+  },
+  {
+    "type": "FINALLY",
+    "named": false
+  },
+  {
+    "type": "FOR",
+    "named": false
+  },
+  {
+    "type": "FORWARD",
+    "named": false
+  },
+  {
+    "type": "FROM",
+    "named": false
+  },
+  {
+    "type": "FUNC",
+    "named": false
+  },
+  {
+    "type": "GENERIC",
+    "named": false
+  },
+  {
+    "type": "GUARD",
+    "named": false
+  },
+  {
+    "type": "IF",
+    "named": false
+  },
+  {
+    "type": "IMPLEMENTATION",
+    "named": false
+  },
+  {
+    "type": "IMPORT",
+    "named": false
+  },
+  {
+    "type": "IN",
+    "named": false
+  },
+  {
+    "type": "INHERIT",
+    "named": false
+  },
+  {
+    "type": "INOUT",
+    "named": false
+  },
+  {
+    "type": "LOOP",
+    "named": false
+  },
+  {
+    "type": "MACRO",
+    "named": false
+  },
+  {
+    "type": "MOD",
+    "named": false
+  },
+  {
+    "type": "MODULE",
+    "named": false
+  },
+  {
+    "type": "NOHIGH",
+    "named": false
+  },
+  {
+    "type": "NOT",
+    "named": false
+  },
+  {
+    "type": "OF",
+    "named": false
+  },
+  {
+    "type": "OR",
+    "named": false
+  },
+  {
+    "type": "OUT",
+    "named": false
+  },
+  {
+    "type": "OVERRIDE",
+    "named": false
+  },
+  {
+    "type": "PACKEDSET",
+    "named": false
+  },
+  {
+    "type": "POINTER",
+    "named": false
+  },
+  {
+    "type": "PROCEDURE",
+    "named": false
+  },
+  {
+    "type": "PUREASM",
+    "named": false
+  },
+  {
+    "type": "QUALIFIED",
+    "named": false
+  },
+  {
+    "type": "READONLY",
+    "named": false
+  },
+  {
+    "type": "RECORD",
+    "named": false
+  },
+  {
+    "type": "REM",
+    "named": false
+  },
+  {
+    "type": "REPEAT",
+    "named": false
+  },
+  {
+    "type": "RETURN",
+    "named": false
+  },
+  {
+    "type": "REVEAL",
+    "named": false
+  },
+  {
+    "type": "ROL",
+    "named": false
+  },
+  {
+    "type": "ROR",
+    "named": false
+  },
+  {
+    "type": "SAR",
+    "named": false
+  },
+  {
+    "type": "SET",
+    "named": false
+  },
+  {
+    "type": "SHL",
+    "named": false
+  },
+  {
+    "type": "SHR",
+    "named": false
+  },
+  {
+    "type": "THEN",
+    "named": false
+  },
+  {
+    "type": "TO",
+    "named": false
+  },
+  {
+    "type": "TRACED",
+    "named": false
+  },
+  {
+    "type": "TYPE",
+    "named": false
+  },
+  {
+    "type": "UNSAFEGUARDED",
+    "named": false
+  },
+  {
+    "type": "UNTIL",
+    "named": false
+  },
+  {
+    "type": "UNTRACED",
+    "named": false
+  },
+  {
+    "type": "VALUE",
+    "named": false
+  },
+  {
+    "type": "VAR",
+    "named": false
+  },
+  {
+    "type": "WHILE",
+    "named": false
+  },
+  {
+    "type": "WITH",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "dereference",
+    "named": true
+  },
+  {
+    "type": "exit_statement",
+    "named": true
+  },
+  {
+    "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "inactive_code",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "pragma",
+    "named": true,
+    "extra": true
+  },
+  {
+    "type": "retry_statement",
+    "named": true
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "wildcard",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  }
+]

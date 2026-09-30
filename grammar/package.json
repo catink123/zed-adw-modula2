@@ -1,0 +1,15 @@
+{
+  "name": "tree-sitter-adw-modula2",
+  "version": "1.1.0",
+  "description": "ADW (Stony Brook) Modula-2 grammar for tree-sitter",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "build-wasm": "tree-sitter build --wasm -o tree-sitter-modula2.wasm",
+    "corpus": "node test/corpus.mjs"
+  },
+  "devDependencies": {
+    "web-tree-sitter": "^0.26.0"
+  }
+}

@@ -1,0 +1,9 @@
+/target/
+/extension.wasm
+/grammars/
+node_modules/
+grammar/tree-sitter-modula2.wasm
+grammar/build/
+*.log
+.DS_Store
+Thumbs.db
