@@ -16,6 +16,9 @@ use zed_extension_api::{self as zed, serde_json, settings::LspSettings, Language
 const SERVER_ID: &str = "adw-modula2-lsp";
 const REPO: &str = "catink123/adw-modula2-lsp";
 const ASSET: &str = "adw-modula2-lsp-server.js";
+/// Release used when the GitHub API cannot be queried (it allows 60 unauthenticated requests per hour per IP,
+/// easily exhausted behind a shared office IP). Release download URLs are not rate-limited.
+const FALLBACK_RELEASE: &str = "v1.1.0";
 
 struct AdwModula2Extension {
     cached_server: Option<String>,
@@ -31,32 +34,38 @@ impl AdwModula2Extension {
         }
 
         zed::set_language_server_installation_status(id, &zed::LanguageServerInstallationStatus::CheckingForUpdate);
-        let release = match zed::latest_github_release(
+        let (version, url) = match zed::latest_github_release(
             REPO,
             zed::GithubReleaseOptions { require_assets: true, pre_release: false },
         ) {
-            Ok(r) => r,
-            Err(e) => {
-                // offline: fall back to any version downloaded earlier
+            Ok(release) => {
+                let asset = release
+                    .assets
+                    .iter()
+                    .find(|a| a.name == ASSET)
+                    .ok_or_else(|| format!("release {} of {REPO} has no asset named {ASSET}", release.version))?;
+                (release.version.clone(), asset.download_url.clone())
+            }
+            Err(_) => {
+                // API unavailable (rate limit, offline, proxy): reuse a downloaded server, else fetch the
+                // pinned release through its direct download URL, which does not count against the API limit
                 if let Some(path) = newest_downloaded() {
                     self.cached_server = Some(path.clone());
                     return Ok(path);
                 }
-                return Err(format!("could not query {REPO} releases: {e}"));
+                (
+                    FALLBACK_RELEASE.to_string(),
+                    format!("https://github.com/{REPO}/releases/download/{FALLBACK_RELEASE}/{ASSET}"),
+                )
             }
         };
-        let asset = release
-            .assets
-            .iter()
-            .find(|a| a.name == ASSET)
-            .ok_or_else(|| format!("release {} of {REPO} has no asset named {ASSET}", release.version))?;
 
-        let dir = format!("{SERVER_ID}-{}", release.version);
+        let dir = format!("{SERVER_ID}-{version}");
         let path = format!("{dir}/server.js");
         if !fs::metadata(&path).is_ok_and(|m| m.is_file()) {
             zed::set_language_server_installation_status(id, &zed::LanguageServerInstallationStatus::Downloading);
             fs::create_dir_all(&dir).map_err(|e| format!("failed to create {dir}: {e}"))?;
-            zed::download_file(&asset.download_url, &path, zed::DownloadedFileType::Uncompressed)
+            zed::download_file(&url, &path, zed::DownloadedFileType::Uncompressed)
                 .map_err(|e| format!("failed to download {ASSET}: {e}"))?;
             // keep only the current version
             if let Ok(entries) = fs::read_dir(".") {
