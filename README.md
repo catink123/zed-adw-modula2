@@ -52,6 +52,13 @@ Server settings are the same as the VS Code extension's `modula2.*` settings, pl
 }
 ```
 
+**`.mod` files open as "Go Mod"?** Zed's built-in Go Mod language (for `go.mod`) also claims the `mod`
+extension. Give it to Modula-2 in `settings.json` (the status bar shows the language of the current file):
+
+```jsonc
+"file_types": { "Modula-2": ["mod", "MOD", "Mod", "def", "DEF", "Def"] }
+```
+
 ADW sources are usually Windows-1252 encoded. Zed opens files as UTF-8, so accented characters in comments or
 strings may show as replacement characters; positions and navigation are unaffected.
 
