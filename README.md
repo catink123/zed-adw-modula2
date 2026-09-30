@@ -18,7 +18,8 @@ Two parts:
 
 The extension finds the server in this order:
 
-1. `lsp.adw-modula2-lsp.binary.path` in your Zed settings (a `.js` file runs with Zed's bundled Node.js);
+1. `lsp.adw-modula2-lsp.binary` in your Zed settings. Zed runs `path` directly, so for the Node script set
+   `path` to `node.exe` and pass the script in `arguments` (see below);
 2. an `adw-modula2-lsp` executable on the `PATH`;
 3. the `adw-modula2-lsp-server.js` asset of the latest [release](https://github.com/catink123/adw-modula2-lsp/releases),
    downloaded automatically and run with Zed's Node.js.
@@ -42,7 +43,10 @@ Server settings are the same as the VS Code extension's `modula2.*` settings, pl
           "compilerErrors": true                                   // show ADW *.err messages
         }
       }
-      // "binary": { "path": "C:\\path\\to\\adw-modula2-lsp-server.js" }
+      // "binary": {
+      //   "path": "C:\\Program Files\\nodejs\\node.exe",
+      //   "arguments": ["C:\\path\\to\\adw-modula2-lsp-server.js", "--stdio"]
+      // }
     }
   }
 }

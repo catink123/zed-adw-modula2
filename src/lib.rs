@@ -5,7 +5,8 @@
 //! the ADW Modula-2 language server (https://github.com/catink123/adw-modula2-lsp), a Node.js program that is
 //! located in this order:
 //!
-//! 1. `lsp.adw-modula2-lsp.binary.path` in Zed settings (a `.js` file is run with Zed's Node.js),
+//! 1. `lsp.adw-modula2-lsp.binary` in Zed settings. Zed itself runs `path` with `arguments` without asking
+//!    the extension, so a Node script needs `path` = node.exe and the script as the first argument,
 //! 2. an `adw-modula2-lsp` executable on the PATH,
 //! 3. the `adw-modula2-lsp-server.js` asset of the latest GitHub release, downloaded once per version.
 
