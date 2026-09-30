@@ -8,7 +8,7 @@ repository = "https://github.com/catink123/zed-adw-modula2"
 
 [grammars.modula2]
 repository = "https://github.com/catink123/zed-adw-modula2"
-rev = "34a2d1075513a8a7850cc1d79496fc169d830a51"
+rev = "9a0ee31e74b764ac39fad4566144089f2e62fc77"
 path = "grammar"
 
 [language_servers.adw-modula2-lsp]
